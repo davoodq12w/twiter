@@ -1,0 +1,11 @@
+{% extends "parent/base_template.html" %}
+{% block title %} Delete Post{% endblock %}
+{% block content%}
+    <div class="rusure">
+        <p style="text-align: justify">Are you sure you want to delete {{ user.username }} account with {{ posts.count }} posts{{ posts.count|pluralize }}?</p>
+        <div class="yes-or-no">
+            <a href="{% url 'blog:delete_account_confirmed' id%}" class="yes">yes</a>
+            <a href="{% url 'blog:profile' id %}" class="no">no</a>
+        </div>
+    </div>
+{% endblock %}

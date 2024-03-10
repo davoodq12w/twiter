@@ -1,0 +1,20 @@
+{% extends "parent/base_template.html" %}
+{% block title %}Login{% endblock %}
+{% block content%}
+    <form method="post">
+    {% csrf_token %}
+        <div class="login-form">
+            <h1 class="login-title">Login</h1>
+            {{ login_form.as_p }}
+            <input type="submit" value="Login" class="login-button">
+            <a href="{% url 'blog:password_reset' %}"> password forgot</a>
+            <p style="color:bisque; text-align: center">don't have an account?<a href="{% url 'blog:add_account'%}" class="add-account">Add Account</a></p>
+
+            {% if user_available == False %}
+           	    <p class="login-error">the username is not available!</p>
+           {% elif password_correct == False %}
+               <p class="login-error">password is incorrect!</p>
+           {% endif %}
+        </div>
+    </form>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends "parent/base_template.html" %}
+
+{% block title %} Search results{% endblock %}
+{% block content%}
+    {% if query %}
+        <p class="count-results">count of results for searching {{ query }} is : {{ posts_results.count|add:images_results.count}}</p>
+        <div class="posts">
+        {% for result in posts_results %}
+            <div class="post">
+            <a href="{% url 'blog:post_detail' result.id%}" class="title_in_list">{{ result.title }}</a>
+            <p class="text">{{result.description|truncatewords:4}}</p>
+            </div>
+            {% empty %}
+                <p class="no-post">no results in posts founded!</p>
+        {% endfor %}
+        </div>
+        <div class="posts">
+        {% for result in images_results %}
+            <div class="post">
+            <a href="{% url 'blog:post_detail' result.post_id%}" class="title_in_list">{{ result.title }}</a>
+            <p class="text">{{result.description|truncatewords:4}}</p>
+            </div>
+            {% empty %}
+                <p class="no-post">no results in images founded!</p>
+        {% endfor %}
+        </div>
+    {% endif %}
+{% endblock %}

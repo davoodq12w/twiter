@@ -1,0 +1,614 @@
+* {
+    font-family: "Comic Sans MS", serif;
+    transition: all ease 200ms;
+    box-sizing: border-box;
+}
+svg{
+    transition: none;
+}
+
+body{
+    background-color: #3b2410;
+
+}
+a {
+    text-decoration: none;
+    display: block;
+}
+label{
+    display: block;
+    margin: 0 auto;
+    height: fit-content;
+    text-align: center;
+    border-radius: 12px;
+    color: bisque;
+    width: 40%;
+    line-height: 43px;
+
+}
+p{
+    margin: 0;
+}
+.container {
+    width: 80vw;
+    margin: 0 auto;
+    height: fit-content;
+    box-shadow: 0 0 3px bisque;
+    border-radius: 12px;
+    padding: 20px;
+    background: #75675a70;
+
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-between;
+
+}
+.add-post,.login ,.logout,.username,.adding-post{
+
+    background-color: #211509;
+    color: bisque;
+    border-radius: 12px;
+    display: block;
+    width: 90px;
+    height: 35px;
+    text-align: center;
+    margin-bottom: 10px;
+    line-height: 35px;
+}
+
+.add-post:hover,.login:hover ,.logout:hover,.username:hover,.adding-post:hover{
+    box-shadow: 0 0 6px #211509;
+}
+
+.posts-title {
+    margin: 20px auto;
+    width: 100%;
+    color: bisque;
+    text-shadow: 0 0 1px #211509;
+    border: 1px solid bisque;
+    border-radius: 12px;
+    text-align: center;
+
+}
+
+.posts {
+    border: 2px solid bisque;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding-top: 20px;
+    background-color: #522c0b;
+}
+
+.post {
+    width: 30%;
+    height: 150px;
+    background-color: bisque;
+    box-shadow: 0 0 6px #211509;
+    border: 1px solid black;
+    border-radius: 12px;
+    padding: 12px;
+    margin-bottom: 20px;
+}
+
+.post:hover {
+    background-color: #ab8f79;
+}
+
+.title_in_list {
+    color: #211509;
+    text-align: center;
+    display: block;
+}
+
+.text {
+    text-align: center;
+    color: #522c0b;
+}
+
+.post-title{
+    margin: 0 auto 10px;
+    height: 50px;
+    text-align: center;
+    border-radius: 12px;
+    background-color: bisque;
+    color: #211509;
+
+}
+.post-description{
+    width: 100%;
+    min-height: 300px;
+    margin: 0 auto;
+    border: 2px solid #ab8f79;
+    background-color: rgba(255, 228, 196, 0.24);
+    text-align: center;
+    border-radius: 12px;
+    padding: 20px;
+}
+.auther{
+    margin: 20px auto;
+    height: 50px;
+    text-align: center;
+    border-radius: 12px;
+    line-height: 50px;
+    border: 1px solid #211509;
+}
+.login-form {
+    width: 35%;
+    height: 420px;
+    border: 2px solid #211509;
+    border-radius: 12px;
+    padding: 15px 15px 0;
+    background-color: rgba(229, 199, 163, 0.16);
+    margin: 50px auto;
+
+
+}
+.login-title{
+    margin: 20px auto;
+    width: 100%;
+    color: bisque;
+    text-shadow: 0 0 1px #211509;
+    text-align: center;
+
+}
+
+.username-input,.password-input,.new-password,.new-username{
+    margin: 0 auto 10px;
+    height: 50px;
+    text-align: center;
+    border-radius: 12px;
+    background-color: rgba(255, 228, 196, 0.53);
+    color: #211509;
+    font-size: 20px;
+    width: 100%;
+}
+
+.login-button{
+    margin: 0 auto 10px;
+    height: 50px;
+    text-align: center;
+    border-radius: 12px;
+    background-color:#211509;
+    color: rgba(255, 228, 196, 0.53);
+    font-size: 20px;
+    width: 100%;
+}
+.add-post-title{
+    margin: 0 35%;
+    height: 50px;
+    text-align: center;
+    border-radius: 12px;
+    background-color: rgba(255, 228, 196, 0.53);
+    color: #211509;
+    font-size: 20px;
+    width: 30%;
+}
+.add-post-description{
+    margin: 0 35%;
+    text-align: center;
+    border-radius: 12px;
+    background-color: rgba(255, 228, 196, 0.53);
+    color: #211509;
+    width: 30%;
+}
+.adding-post{
+    margin: 0 35%;
+    width: 30%;
+    line-height: 30px;
+}
+.unethical-word{
+    margin: 5px 35%;
+    height: 50px;
+    text-align: center;
+    border-radius: 12px;
+    background-color:rgba(255, 228, 196, 0.53);
+    color:black;
+    font-size: 16px;
+    width: 30%;
+    line-height: 50px;
+    border: red 1px solid;
+}
+.ccac{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+.c_count{
+    margin: 0 auto;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    color: bisque;
+    border: 1px solid bisque;
+    border-radius: 12px;
+    width: 50%;
+}
+.add-comment{
+    margin: 0 auto;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    color: bisque;
+    border: 1px solid bisque;
+    border-radius: 12px;
+    width: 50%;
+}
+.add-comment:hover{
+    color: #ab8f79;
+}
+.comments{
+    height: fit-content;
+    width: 100%;
+    border: #211509 2px solid;
+    border-radius: 12px;
+    background-color:#ab8f79;
+    color: #211509;
+    padding: 20px;
+    margin: 10px auto;
+}
+.empty{
+    margin: 0 auto;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    color: #211509;
+    width: 100%;
+
+}
+.p-auther{
+    border-radius: 10px;
+    border: #211509 1px solid;
+    padding: 3px;
+    width: fit-content;
+    height: 35px;
+}
+.comment-saved{
+    margin: 10px auto;
+    height: 50px;
+    width: 30%;
+    border:2px solid green;
+    border-radius: 12px;
+    color: green;
+    text-align: center;
+    line-height: 45px;
+}
+.rtp{
+    margin: 10px auto;
+    height: 50px;
+    width: 30%;
+    border:2px solid bisque;
+    border-radius: 12px;
+    color: bisque;
+    text-align: center;
+    line-height: 45px;
+}
+.rtp:hover{
+    color: #ab8f79;
+}
+.add-comment-auther{
+    margin: 0 35%;
+    height: 50px;
+    text-align: center;
+    border-radius: 12px;
+    background-color: rgba(255, 228, 196, 0.53);
+    color: #211509;
+    font-size: 20px;
+    width: 30%;
+}
+.add-comment-text{
+    margin: 0 35%;
+    text-align: center;
+    border-radius: 12px;
+    background-color: rgba(255, 228, 196, 0.53);
+    color: #211509;
+    width: 30%;
+}
+.add-comment-button{
+    margin: 0 35%;
+    height: 50px;
+    text-align: center;
+    border-radius: 12px;
+    background-color: rgba(255, 228, 196, 0.53);
+    color: #211509;
+    font-size: 20px;
+    width: 30%;
+}
+.prolific_users{
+    color: bisque;
+    display: flex;
+    justify-content: space-between;
+}
+.prolific_users_p{
+    color: #ab8f79;
+    font-size: 18px;
+    text-align: center;
+}
+.p_user{
+    border: bisque 1px solid;
+    border-radius: 12px;
+    text-align: center;
+    width: 30%;
+    height: 50px;
+    line-height: 50px;
+    margin: 10px 0;
+}
+.search-box{
+    margin: 0 auto 20px;
+    height: 50px;
+    border-radius: 12px;
+    line-height: 50px;
+    width: 60%;
+    border: 2px solid #522c0b;
+    background-color: bisque;
+    color: #211509;
+    padding: 3px 10px;
+    display: flex;
+    justify-content: space-between;
+
+}
+.search-icon{
+    height: 44px;
+    width: 10%;
+    color: #522c0b;
+}
+.search{
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+    height: 40px;
+    font-size: 18px;
+    width: 60%;
+    color: #522c0b;
+    margin-bottom: 4px;
+    border-radius: 12px;
+}
+.search-button{
+    width: 20%;
+    height: 40px;
+    border-radius: 10px;
+    background-color: #522c0b;
+    color: bisque;
+    border: #211509;
+    font-size: 16px;
+}
+.search:focus-visible{
+    border: none;
+    outline: none;
+}
+.count-results{
+    margin: 10px auto;
+    color: bisque;
+    text-align: center;
+}
+.no-post{
+    margin: 0 auto 20px;
+    color: bisque;
+    text-align: center;
+    font-size: 20px;
+}
+
+.delete-post-icon{
+    height: 30px;
+    width: 30px;
+    transition: all ease 50ms;
+}
+.post-tools{
+    position: relative;
+}
+.delete-post{
+    color: #211509;
+    transition: all ease 50ms;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+}
+
+.delete-post-icon:hover{
+    color: #b47c46;
+}
+
+.add-account-form{
+    width: 35%;
+    height: 500px;
+    border: 2px solid #211509;
+    border-radius: 12px;
+    padding: 15px 15px 0;
+    background-color: rgba(229, 199, 163, 0.16);
+    margin: 50px auto;
+}
+
+.add-account-error, .login-error{
+    margin: 0 auto;
+    text-align: center;
+    color: #c20e0e;
+    font-size: 16px;
+    width: 100%;
+}
+
+.add_account-button{
+    margin: 10px auto;
+    height: 50px;
+    text-align: center;
+    border-radius: 12px;
+    background-color:#522c0b;
+    color: bisque;
+    font-size: 20px;
+    width: 100%;
+}
+
+.add-account{
+    color: #5ea215;
+    display: inline;
+}
+.add-account:hover{
+    color: #baf800;
+}
+.add-account-title{
+    margin: 10px auto;
+    width: 100%;
+    color: bisque;
+    text-shadow: 0 0 1px #211509;
+    text-align: center;
+}
+.prof{
+    margin: 20px auto;
+    border-radius: 12px;
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    height: 60px;
+    font-size: 20px;
+    color: #211509;
+    background-color: bisque;
+    border: 4px solid #522c0b;
+    outline: bisque 2px solid;
+    padding: 0 2px 0 20px;
+    justify-content: space-between;
+    text-align: center;
+    line-height: 50px;
+}
+.edit-profile{
+    margin: auto 0;
+    border-radius: 12px;
+    height: 45px;
+    width: 12%;
+    background-color: #211509;
+    color: bisque;
+    line-height: 45px;
+}
+.user-icon{
+    width: 25px;
+    margin-right: 5px;
+
+}
+.prof-username{
+    display: flex;
+    align-items: center;
+}
+.edit-profile-form{
+    margin: 20px auto;
+    padding: 20px;
+    height: 450px;
+    width: 40%;
+    border: 2px solid #211509;
+    border-radius: 12px;
+    background-color: rgba(229, 199, 163, 0.16);
+}
+.edit-profile-buttons{
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+.apply-changes{
+    width: 50%;
+    color: bisque;
+    background-color: #211509;
+    height: 50px;
+    border: 2px solid #ab9881;
+    border-radius: 12px;
+    font-size: 20px;
+}
+.apply-changes:hover{
+    background-color: #3d250e;
+}
+.cancel-edit-profile{
+    width: 50%;
+    color: bisque;
+    background-color: #64401d;
+    height: 50px;
+    border: 2px solid #342108;
+    border-radius: 12px;
+    font-size: 20px;
+    line-height: 45px;
+    text-align: center;
+}
+.cancel-edit-profile:hover{
+    background-color: #4d2c10;
+}
+.rusure{
+    width: 40%;
+    height: 150px;
+    padding: 20px;
+    border:2px solid #d3b99a;
+    background-color: rgba(229, 199, 163, 0.16);
+    border-radius: 12px;
+    margin: 20px auto;
+    font-size: 20px;
+    text-align: center;
+}
+.yes{
+    border-radius: 8px;
+    height: 50px;
+    width: 50%;
+    line-height: 40px;
+    border:2px solid rgba(194, 14, 14, 0.51);
+    color: rgb(255, 228, 196);
+}
+.yes:hover{
+    background-color: rgba(255, 0, 0, 0.11);
+}
+.no{
+    border-radius: 8px;
+    height: 50px;
+    line-height: 40px;
+    width: 50%;
+    border:2px solid rgb(255, 228, 196);
+    color: rgb(255, 228, 196);
+}
+.no:hover{
+    background-color: rgba(255, 228, 196, 0.3);
+}
+.yes-or-no{
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+.Home{
+    width: 50%;
+    border:2px solid #522c0b;
+    border-radius: 12px;
+    height: 50px;
+    color: #522c0b;
+    text-align: center;
+    line-height: 45px;
+    margin: 0 auto;
+    background-color: bisque;
+}
+.Home:hover{
+    background-color: rgba(255, 228, 196, 0.44);
+}
+.shortcuts{
+    width: 28%;
+    display: flex;
+    gap: 10px;
+}
+.logo{
+    width: 30%;
+}
+
+.logo-img{
+    width: 40%;
+    margin-left:50px ;
+}
+.post-image{
+    width: 100%;
+    border: 3px solid black;
+    border-radius: 12px;
+    margin: 20px auto;
+}
+.add-image{
+
+    display: block;
+    width: 90px;
+    height: 35px;
+    margin:0 auto;
+
+}

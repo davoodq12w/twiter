@@ -1,0 +1,12 @@
+{% extends "parent/base_template.html" %}
+{% block title %}Add Post{% endblock %}
+{% block content%}
+    <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{form.as_p }}
+    {% if word_filter == False %}
+        <p class="unethical-word">the title or text contains an unethical word!</p>
+    {% endif %}
+    <input type="submit" value="Add Post" class="adding-post">
+    </form>
+{% endblock %}

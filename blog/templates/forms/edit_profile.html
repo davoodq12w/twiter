@@ -1,0 +1,22 @@
+{% extends "parent/base_template.html" %}
+{% block title %} Edit Profile{% endblock %}
+{% block content%}
+    <div>
+        <h1 style="color: bisque; text-align: center;" >edit profile</h1>
+        <form method="post">
+            {% csrf_token %}
+            <div class="edit-profile-form">
+                {{ form.as_p }}
+                <div class="edit-profile-buttons">
+                <input type="submit" value="Apply Changes" class="apply-changes">
+                <a href="{% url 'blog:profile' id %}" class="cancel-edit-profile">Cancel</a>
+                </div>
+                <a href="{% url 'blog:delete_account' id%}" style="color: #c20e0e; margin:10px 0 0 5px;">Delete Account</a>
+                {% if password_match == False %}
+                    <p class="edit-profile-error">password and confirm password do not match!</p>
+                {% endif %}
+            </div>
+
+        </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends "parent/base_template.html" %}
+{% block title %} Delete Post{% endblock %}
+{% block content%}
+    <div class="rusure">
+        <p style="text-align: justify">Are you sure you want to delete this post?</p>
+        <div class="yes-or-no">
+            <a href="{% url 'blog:delete_post_confirmed' id%}" class="yes">yes</a>
+            <a href="{% url 'blog:post_detail' id %}" class="no">no</a>
+        </div>
+    </div>
+{% endblock %}

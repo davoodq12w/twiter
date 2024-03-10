@@ -1,0 +1,17 @@
+{% extends "parent/base_template.html" %}
+{% block title %}Add Comment{% endblock %}
+{% block content%}
+    {% if comment %}
+        <p class="comment-saved">Comment saved!</p>
+        <a href="{{ post.get_absolute_url }}" class="rtp"> return to the post</a>
+    {% else %}
+        <form method="post">
+            {% csrf_token %}
+            {{ comment_form.as_p }}
+            {% if word_filter == False %}
+                <p class="unethical-word">the title or text contains an unethical word!</p>
+            {% endif %}
+            <input type="submit" value="Add Comment" class="add-comment-button">
+        </form>
+    {% endif %}
+{% endblock %}

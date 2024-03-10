@@ -1,0 +1,17 @@
+{% extends "parent/base_template.html" %}
+{% block title %} Add Account{% endblock %}
+{% block content%}
+    <div class="add-account-form">
+        <form method="post">
+            {% csrf_token %}
+            <h1 class="add-account-title">Add Account</h1>
+            {{ form.as_p }}
+           <input type="submit" value="Add Account" class="add_account-button">
+           {% if username_available %}
+           	    <p class="add-account-error">the username is already available!</p>
+           {% elif password_match == False %}
+               <p class="add-account-error">password and confirm password do not match!</p>
+           {% endif %}
+       </form>
+    </div>
+{% endblock %}
